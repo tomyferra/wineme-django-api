@@ -2,7 +2,7 @@ from django.db import models
 import datetime
 
 # Create your models here.
-#change
+#changes
 class Wine(models.Model):
     Name = models.CharField(max_length=500)
     Winery = models.CharField(max_length=500)
