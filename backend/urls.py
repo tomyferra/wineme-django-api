@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from wineme.views import index
 from rest_framework import routers
 from wineme import views
 
@@ -25,4 +26,5 @@ router.register(r'wines', views.WineView, 'wineme')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('', index)
 ]
